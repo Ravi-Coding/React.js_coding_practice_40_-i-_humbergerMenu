@@ -8,8 +8,8 @@ import {BsInfoCircleFill} from 'react-icons/bs'
 
 import './index.css'
 
-const Header = () => {
-  ;<div className="nav-header">
+const Header = () => (
+  <div className="nav-header">
     <div className="nav-content">
       <Link to="/">
         <img
@@ -25,6 +25,7 @@ const Header = () => {
             className="hamburger-icon-button"
             type="button"
             data-testid="hamburgerIconButton"
+            aria-label="close"
           >
             <GiHamburgerMenu size="30" />
           </button>
@@ -38,6 +39,7 @@ const Header = () => {
               type="button"
               data-testid="closeButton"
               onClick={() => close()}
+              aria-label="close"
             >
               <IoMdClose size="30" color="#616e7c" />
             </button>
@@ -60,5 +62,5 @@ const Header = () => {
       </Popup>
     </div>
   </div>
-}
+)
 export default withRouter(Header)
